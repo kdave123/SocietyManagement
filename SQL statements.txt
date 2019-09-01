@@ -1,0 +1,63 @@
+
+CREATE DATABASE IF NOT EXISTS `society` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `society`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `maintainentry`
+--
+
+CREATE TABLE `maintainentry` (
+  `mn_sno` int(11) NOT NULL,
+  `mn_name` varchar(100) NOT NULL,
+  `mn_amount` decimal(10,0) NOT NULL,
+  `mn_date` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `member`
+--
+
+CREATE TABLE `member` (
+  `mn_sno` int(11) NOT NULL,
+  `mn_name` varchar(100) NOT NULL,
+  `mn_email` varchar(100) NOT NULL,
+  `mn_contact` int(11) NOT NULL,
+  `mn_address` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `maintainentry`
+--
+ALTER TABLE `maintainentry`
+  ADD PRIMARY KEY (`mn_sno`);
+
+--
+-- Indexes for table `member`
+--
+ALTER TABLE `member`
+  ADD PRIMARY KEY (`mn_sno`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `maintainentry`
+--
+ALTER TABLE `maintainentry`
+  MODIFY `mn_sno` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `member`
+--
+ALTER TABLE `member`
+  MODIFY `mn_sno` int(11) NOT NULL AUTO_INCREMENT;
+COMMIT;
